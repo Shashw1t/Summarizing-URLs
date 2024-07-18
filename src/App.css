@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
-
 .main {
   width: 100vw;
   min-height: 100vh;
@@ -17,8 +13,8 @@
 }
 
 .main:before {
-  /* background: linear-gradient(to right, #000000, #434343);  position: absolute; */
-  background: linear-gradient(to right, #000428, #004e92); position: absolute;
+  background: linear-gradient(to right, #000428, #004e92);
+  position: absolute;
   content: "";
   z-index: 2;
   width: 100%;
@@ -69,6 +65,15 @@
   }
 }
 
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Tailwind Styles */
 
 .app {
@@ -76,7 +81,16 @@
 }
 
 .black_btn {
-  @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
+  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-black bg-black py-2 px-6 text-sm font-semibold text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black;
+}
+
+.black_btn::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #7e22ce; /* purple border */
+  border-radius: inherit;
+  animation: spin-slow 4s linear infinite;
 }
 
 .head_text {
@@ -88,7 +102,7 @@
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-600 sm:text-xl text-center max-w-2xl;
+  @apply mt-5 text-lg text-black sm:text-xl text-center max-w-2xl;
 }
 
 .url_input {
