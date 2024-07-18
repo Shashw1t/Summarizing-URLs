@@ -84,7 +84,7 @@ const Demo = () => {
           />
           <button
             type='submit'
-            className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700 '
+            className='submit_btn peer-focus:border-orange-500 peer-focus:text-orange-500 '
           >
             <p>↵</p>
           </button>
@@ -121,7 +121,7 @@ const Demo = () => {
           <p className='font-inter font-bold text-black text-center'>
             Oops!, Summarizer will try again...
             <br />
-            <span className='font-satoshi font-normal text-gray-700'>
+            <span className='font-satoshi font-normal text-black'>
               {error?.data?.error}
             </span>
           </p>
@@ -132,7 +132,7 @@ const Demo = () => {
                 Article <span className='blue_gradient'>Summary</span>
               </h2>
               <div className='summary_box'>
-                <p className='font-inter font-medium text-sm text-gray-700'>
+                <p className='font-inter font-medium text-sm text-black'>
                   {article.summary}
                 </p>
               </div>
