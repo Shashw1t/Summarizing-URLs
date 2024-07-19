@@ -26,9 +26,11 @@ const Hero = () => {
         </span>
       </h1>
       <h2 className='desc'>
+        <b>
         Summarize Articles in one click, effortlessly.
         <br className='hidden md:block' />
         Get your articles, sites, blogs summarized concisely.
+        </b>
       </h2>
     </header>
   );
