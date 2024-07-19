@@ -19,16 +19,16 @@ const Hero = () => {
       </nav>
 
       <h1 className='head_text'>
-        Website URL Summarizer<br className='max-md:hidden' />
+        Article Summarizer<br className='max-md:hidden' />
         <span className="text-xs font-extrabold text-black text-center">powered by</span>
         <span className='orange_gradient'>
           OpenAI GPT-4
         </span>
       </h1>
       <h2 className='desc'>
-        Summarize URLs in one click, effortlessly.
+        Summarize Articles in one click, effortlessly.
         <br className='hidden md:block' />
-        Get your sites, URLs, articles, blogs summarized concisely.
+        Get your articles, sites, blogs summarized concisely.
       </h2>
     </header>
   );
